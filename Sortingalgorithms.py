@@ -31,9 +31,6 @@ def selectionsort(list):
 
     return list
 
-L = [5, 3, 8, 1, 12, 7, -2]
-print(selectionsort(L))
-
 # Bubblesort (better version)
 def bubblesort(list):
     length = len(list)
