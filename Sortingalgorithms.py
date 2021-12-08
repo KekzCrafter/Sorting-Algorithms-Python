@@ -87,18 +87,19 @@ def insertsort(list):
 
     # Wiederhole, solange die komplette Liste nicht verglichen wurde
     while i < length:
+
         element = list[i]
-        rest = i
+        j = i
         
         # Ist die ausgewählte Zahl kleiner als die vorherige in der Liste?
         # Vergleiche mit allen vorherigen Zahlen
-        while (rest > 0) and element < list[rest - 1]:
-            list[rest] = list[rest - 1]
-            list[rest - 1] = element
+        while (j > 0) and element < list[j - 1]:
+            list[j] = list[j - 1]
+            list[j - 1] = element
 
-            rest = rest - 1
+            j = j - 1
 
-        list[rest] = element
+        list[j] = element
         i = i + 1
     
     return list
