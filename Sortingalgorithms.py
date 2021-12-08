@@ -8,7 +8,7 @@ def selectionsort(list):
     while(i < length - 1):
         
         min = i
-        j = i
+        j = i + 1
 
         # Finde die Position der kleinsten Zahl in der restlichen Liste
         while(j < length):
@@ -83,7 +83,7 @@ def quicksort(list):
 # Insertsort
 def insertsort(list):
     length = len(list)
-    i = 0
+    i = 1
 
     # Wiederhole, solange die komplette Liste nicht verglichen wurde
     while i < length:
