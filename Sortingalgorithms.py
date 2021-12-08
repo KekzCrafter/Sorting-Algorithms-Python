@@ -6,9 +6,7 @@ def selectionsort(list):
     # Wiederhole, solange komplette Liste nicht verglichen wurde
     # -1, damit letzte Zahl nicht nochmal mit sich selbst verglichen wird
     while(i < length - 1):
-
         
-        print(list)
         min = i
         j = i
 
