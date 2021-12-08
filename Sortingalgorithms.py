@@ -4,8 +4,11 @@ def selectionsort(list):
     i = 0
 
     # Wiederhole, solange komplette Liste nicht verglichen wurde
+    # -1, damit letzte Zahl nicht nochmal mit sich selbst verglichen wird
     while(i < length - 1):
 
+        
+        print(list)
         min = i
         j = i
 
@@ -27,6 +30,9 @@ def selectionsort(list):
         i += 1
 
     return list
+
+L = [5, 3, 8, 1, 12, 7, -2]
+print(selectionsort(L))
 
 # Bubblesort (better version)
 def bubblesort(list):
