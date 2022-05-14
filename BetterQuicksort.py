@@ -1,28 +1,28 @@
-def quicksort(L, anfang, ende):
-    if L != []:
-        pivot = L[anfang]
-        links = anfang
-        rechts = ende
+def quicksort(l, begin, end):
+    if l != []:
+        pivot = l[begin]
+        left = begin
+        right = end
 
-        while links <= rechts:
-            while L[links] < pivot:
-                links = links + 1
+        while left <= right:
+            while l[left] < pivot:
+                left = left + 1
 
-            while L[rechts] > pivot:
-                rechts = rechts - 1
+            while l[right] > pivot:
+                right = right - 1
 
-            if links <= rechts:
-                if links < rechts:
-                    h = L[links]
-                    L[links] = L[rechts]
-                    L[rechts] = h
+            if left <= right:
+                if left < right:
+                    h = l[left]
+                    l[left] = l[right]
+                    l[right] = h
 
-                links = links + 1
-                rechts = rechts - 1
+                left = left + 1
+                right = right - 1
 
-            if anfang < rechts:
-                L = quicksort(L, anfang, rechts)
-            if links < ende:
-                L = quicksort(L, links, ende)
+            if begin < right:
+                l = quicksort(l, begin, right)
+            if left < end:
+                l = quicksort(l, left, end)
         
-        return L
+        return l
